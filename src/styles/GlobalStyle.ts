@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
 
   html, body {
     height: 100%;
+    width: 100%;
   }
 
   body {
@@ -22,6 +23,7 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
 
   * {
     box-sizing: border-box;
+    z-index: 0;
   }
 
   p {

@@ -10,6 +10,8 @@ const color = {
   gray: tinycolor('#FFF').darken(50),
   darkgray: tinycolor('#FFF').darken(65),
   darkergray: tinycolor('#FFF').darken(80),
+  blueOne: '#1763ae',
+  blueTwo: '#114272',
   islands: {
     light: '#D71E44',
     dark: '#9E1B34',

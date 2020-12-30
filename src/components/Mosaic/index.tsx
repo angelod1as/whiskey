@@ -4,7 +4,7 @@ import Whisky from './Whisky'
 import { nanoid } from 'nanoid'
 import { useState } from 'react'
 
-export interface Whisky {
+export interface WhiskyData {
   title: string
   image: string
   cost: number
@@ -14,7 +14,7 @@ export interface Whisky {
 }
 
 interface MosaicProps {
-  whiskies: Whisky[]
+  whiskies: WhiskyData[]
 }
 
 export default function Mosaic({ whiskies }: MosaicProps) {
