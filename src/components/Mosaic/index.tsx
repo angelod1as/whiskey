@@ -30,12 +30,17 @@ export default function Mosaic({ whiskies }: MosaicProps) {
 
   filters.unshift('all')
 
+  console.log(checked)
+
   return (
     <Wrapper>
       <Filter {...{ filters, checked, setChecked }} />
       <Whiskies>
         {whiskies.map(whisky => {
-          return <Whisky key={nanoid()} {...{ whisky, checked }} />
+          if (checked === 'all' || checked === whisky.region) {
+            return <Whisky key={nanoid()} {...{ whisky, checked }} />
+          }
+          return ''
         })}
       </Whiskies>
     </Wrapper>

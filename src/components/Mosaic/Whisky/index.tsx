@@ -1,23 +1,27 @@
+import { WhiskyData } from '..'
 import Back from './Back'
 import Panel from './Panel'
+import Link from 'next/link'
 import { Wrapper, Front, Image } from './styles'
 
 interface WhiskyProps {
   whisky: WhiskyData
-  checked: string
 }
 
 export default function Whisky({ whisky }: WhiskyProps) {
   const { cost, image, region, tasting_notes, title, uri } = whisky
+
   return (
-    <Wrapper>
-      <Back {...{ region }} />
-      <Front>
-        <Panel {...{ cost, image, region, tasting_notes, title, uri }} />
-        <Image>
-          <img src={`/assets/${image}`} alt="" />
-        </Image>
-      </Front>
-    </Wrapper>
+    <Link href={uri}>
+      <Wrapper>
+        <Back {...{ region }} />
+        <Front>
+          <Panel {...{ cost, region, tasting_notes, title }} />
+          <Image>
+            <img src={`/assets/${image}`} alt="" />
+          </Image>
+        </Front>
+      </Wrapper>
+    </Link>
   )
 }

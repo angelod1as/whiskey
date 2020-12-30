@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-bottom: 36px;
 `
 
 export const Input = styled.input`
