@@ -1,12 +1,15 @@
 import { FlattenSimpleInterpolation } from 'styled-components'
 import { css } from './styled-components'
+import tinycolor from 'tinycolor2'
 
 const color = {
   white: '#FFFFFF',
   black: '#000000',
-  gray: '#CCCCCC',
-  darkgray: '#A9A9A9',
-  darkergray: '#8B8B8B',
+  lightergray: tinycolor('#FFF').darken(10),
+  lightgray: tinycolor('#FFF').darken(35),
+  gray: tinycolor('#FFF').darken(50),
+  darkgray: tinycolor('#FFF').darken(65),
+  darkergray: tinycolor('#FFF').darken(80),
   islands: {
     light: '#D71E44',
     dark: '#9E1B34',

@@ -11,7 +11,7 @@ interface ArticleProps {
   articles: Article[]
 }
 
-export default function Articles({ articles }) {
+export default function Articles({ articles }: ArticleProps) {
   return (
     <Wrapper>
       {/* <Story>

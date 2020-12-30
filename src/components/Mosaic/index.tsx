@@ -1,11 +1,15 @@
-import { Wrapper } from './styles'
+import Filter from './Filter'
+import { Wrapper, Whiskies } from './styles'
+import Whisky from './Whisky'
+import { nanoid } from 'nanoid'
+import { useState } from 'react'
 
 export interface Whisky {
   title: string
   image: string
   cost: number
   region: string
-  tastingNotes: string[]
+  tasting_notes: string[]
   uri: string
 }
 
@@ -14,14 +18,26 @@ interface MosaicProps {
 }
 
 export default function Mosaic({ whiskies }: MosaicProps) {
+  const [checked, setChecked] = useState('all')
+
+  const filters = whiskies
+    .map(whisky => {
+      return whisky.region
+    })
+    .filter((whisky, index, array) => {
+      return array.indexOf(whisky) === index
+    })
+
+  filters.unshift('all')
+
   return (
     <Wrapper>
-      {/* <Mosaic>
-        <Filter>
-        </Filter>
-        <Whiskies>
-        </Whiskies>
-      </Mosaic> */}
+      <Filter {...{ filters, checked, setChecked }} />
+      <Whiskies>
+        {whiskies.map(whisky => {
+          return <Whisky key={nanoid()} {...{ whisky, checked }} />
+        })}
+      </Whiskies>
     </Wrapper>
   )
 }

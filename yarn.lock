@@ -387,6 +387,25 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/context-base/-/context-base-0.14.0.tgz#c67fc20a4d891447ca1a855d7d70fa79a3533001"
   integrity sha512-sDOAZcYwynHFTbLo6n8kIbLiVF3a3BLkrmehJUyEbT9F+Smbi47kLGS2gG2g0fjBLR/Lr1InPD7kXL7FaTqEkw==
 
+"@types/color-convert@*":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/color-convert/-/color-convert-2.0.0.tgz#8f5ee6b9e863dcbee5703f5a517ffb13d3ea4e22"
+  integrity sha512-m7GG7IKKGuJUXvkZ1qqG3ChccdIM/qBBo913z+Xft0nKCX4hAU/IxKwZBU4cpRZ7GS5kV4vOblUkILtSShCPXQ==
+  dependencies:
+    "@types/color-name" "*"
+
+"@types/color-name@*":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
+  integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
+
+"@types/color@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@types/color/-/color-3.0.1.tgz#2900490ed04da8116c5058cd5dba3572d5a25071"
+  integrity sha512-oeUWVaAwI+xINDUx+3F2vJkl/vVB03VChFF/Gl3iQCdbcakjuoJyMOba+3BXRtnBhxZ7uBYqQBi9EpLnvSoztA==
+  dependencies:
+    "@types/color-convert" "*"
+
 "@types/hoist-non-react-statics@*":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -3790,7 +3809,7 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.2.tgz#f5376400695168f4cc694ac9393d0c9585eeea19"
   integrity sha512-M2ufzIiINKCuDfBSAUr1vWQ+vuVcA9kqx8JJUsbQi6yf1uGRyb7HfpdfUr5qLXf3B/t8dPvcjhKMmlfnP47EzQ==
 
-nanoid@^3.1.16:
+nanoid@^3.1.16, nanoid@^3.1.20:
   version "3.1.20"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.20.tgz#badc263c6b1dcf14b71efaa85f6ab4c1d6cfc788"
   integrity sha512-a1cQNyczgKbLX9jwbS/+d7W8fX/RfgYR7lVWwWOGIPNgK2m0MWvrGF6/m4kk6U3QcFMnZf3RIhL0v2Jgh/0Uxw==
@@ -5605,6 +5624,11 @@ timers-browserify@^2.0.4:
   integrity sha512-9phl76Cqm6FhSX9Xe1ZUAMLtm1BLkKj2Qd5ApyWkXzsMRaA7dgr81kf4wJmQf/hAvg8EEyJxDo3du/0KlhPiKQ==
   dependencies:
     setimmediate "^1.0.4"
+
+tinycolor2@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
+  integrity sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
