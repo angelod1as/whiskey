@@ -45,18 +45,22 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
   h1, h2, h3 {
     margin: 20px 0;
     padding: 0;
-    font-family: 'Cabin', sans-serif;
-    font-weight: 700;
+    ${p => p.theme.font.display}
+    text-transform: uppercase;
+    letter-spacing: -3px;
   }
 
   h1 {
     font-size: 48px;
-    line-height: 110%;
+    line-height: 100%;
+    font-style: italic;
   }
 
   h2 {
-    font-size: 30px;
-    line-height: 120%;
+    font-size: 40px;
+    line-height: 90%;
+    font-style: italic;
+
   }
 
   h3 {
@@ -65,13 +69,7 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
   }
 
   a {
-    display: inline-block;
-    font-weight: 500;
-    transition: all .2s;
-    text-decoration: underline;
-    &:hover {
-      text-decoration: none;
-    }
+    color: unset;
   }
 
   svg {

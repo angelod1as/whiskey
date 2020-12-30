@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   position: relative;
   height: 616px;
+  cursor: pointer;
 
   .hover {
     transition: all 0.2s ease-in-out;
