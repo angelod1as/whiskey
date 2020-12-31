@@ -1,4 +1,4 @@
-# Whisky
+# Whiskey
 
 ![Website screenshot](https://i.imgur.com/0eveFnp.png)
 
