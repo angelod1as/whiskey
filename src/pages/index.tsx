@@ -17,19 +17,19 @@ export async function getStaticProps() {
   const url =
     NODE_ENV === 'development' ? NEXT_PUBLIC_DEV_URL : NEXT_PUBLIC_PROD_URL
 
-  const getData = async (filename: string) => {
-    const path = `${url}/data/${filename}.json`
-    const data = await axios.get(path)
-    return data.data
-  }
+  // const getData = async (filename: string) => {
+  //   const path = `${url}/data/${filename}.json`
+  //   const data = await axios.get(path)
+  //   return data.data
+  // }
 
-  const articles: ArticleData[] = await getData('articles')
-  const whiskies: WhiskyData[] = await getData('whiskies')
+  // const articles: ArticleData[] = await getData('articles')
+  // const whiskies: WhiskyData[] = await getData('whiskies')
 
   return {
     props: {
-      articles,
-      whiskies,
+      articles: [],
+      whiskies: [],
     },
   }
 }
