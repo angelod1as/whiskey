@@ -1,11 +1,11 @@
-import { Article } from '@components/Articles'
-import { Whisky } from '@components/Mosaic'
+import { ArticleData } from '@components/Articles'
+import { WhiskyData } from '@components/Mosaic'
 import Home from '@components/Pages/Home'
 import axios from 'axios'
 
 export interface IndexProps {
-  whiskies: Whisky[]
-  articles: Article[]
+  whiskies: WhiskyData[]
+  articles: ArticleData[]
 }
 
 export default function Index({ whiskies, articles }: IndexProps) {
@@ -23,8 +23,8 @@ export async function getStaticProps() {
     return data.data
   }
 
-  const articles: Article[] = await getData('articles')
-  const whiskies: Whisky[] = await getData('whiskies')
+  const articles: ArticleData[] = await getData('articles')
+  const whiskies: WhiskyData[] = await getData('whiskies')
 
   return {
     props: {

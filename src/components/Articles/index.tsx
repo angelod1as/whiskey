@@ -9,7 +9,7 @@ import {
   Margin,
 } from './styles'
 
-export interface Article {
+export interface ArticleData {
   title: string
   teaser: string
   img: string
@@ -17,7 +17,7 @@ export interface Article {
 }
 
 interface ArticleProps {
-  articles: Article[]
+  articles: ArticleData[]
 }
 
 export default function Articles({ articles }: ArticleProps) {
@@ -33,9 +33,8 @@ export default function Articles({ articles }: ArticleProps) {
               </Story>
             </Front>
 
-            <Back>
+            <Back image={article.img}>
               <div />
-              <img src={`/assets/${article.img}`} alt="" />
             </Back>
           </a>
         ))}

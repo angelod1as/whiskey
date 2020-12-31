@@ -6,8 +6,10 @@ export const BG = styled.div`
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: -5px;
   margin: 36px;
+  @media ${p => p.theme.size.small} {
+    margin: 12px;
+  }
 `
 
 export const Upper = styled.div<{ region: string }>`

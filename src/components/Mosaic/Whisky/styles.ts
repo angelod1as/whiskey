@@ -21,15 +21,26 @@ export const Front = styled.div`
   height: 100%;
   align-items: center;
   justify-content: space-between;
+  @media ${p => p.theme.size.small} {
+    flex-direction: column;
+    justify-content: center;
+  }
 `
 
-export const Image = styled.div`
+export const Image = styled.div<{ image: string }>`
   min-width: 160px;
   max-width: 205px;
   position: relative;
-  img {
-    width: auto;
-    height: auto;
-    max-height: 616px;
+  width: 100%;
+  height: 100%;
+
+  background-image: url(/assets/${p => p.image});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  @media ${p => p.theme.size.small} {
+    width: 160px;
+    display: block;
   }
 `

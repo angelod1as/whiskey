@@ -4,6 +4,11 @@ export const Wrapper = styled.div`
   margin-bottom: ${36 + 36}px;
   text-transform: capitalize;
   align-self: flex-end;
+  @media ${p => p.theme.size.small} {
+    margin-bottom: 36px;
+    margin-top: ${36 + 36}px;
+    align-self: flex-start;
+  }
 `
 
 export const Margin = styled.div`
@@ -14,6 +19,10 @@ export const Title = styled.div`
   ${p => p.theme.font.display}
   font-size: 36px;
   color: ${p => p.theme.color.white};
+
+  @media ${p => p.theme.size.small} {
+    font-size: 26px;
+  }
 `
 
 export const Region = styled.div`
@@ -32,14 +41,21 @@ export const Flavours = styled.div<{ region: string }>`
   margin-top: 36px;
   margin-left: 10px;
   position: relative;
-  height: 60px;
+  min-height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 40px;
   color: ${p => p.theme.color.white};
 
+  @media ${p => p.theme.size.small} {
+    display: block;
+    padding: 10px 20px;
+  }
+
   &:before {
+    z-index: -1;
+    min-height: 60px;
     position: absolute;
     left: 0;
     right: 0;
@@ -56,7 +72,11 @@ export const Flavours = styled.div<{ region: string }>`
   }
 `
 export const Flavour = styled.p`
-  margin: 0;
+  margin: 0 20px;
   padding: 0;
   font-size: 14px;
+
+  @media ${p => p.theme.size.small} {
+    margin: 10px 0;
+  }
 `

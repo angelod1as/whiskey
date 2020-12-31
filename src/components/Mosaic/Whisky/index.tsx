@@ -17,9 +17,7 @@ export default function Whisky({ whisky }: WhiskyProps) {
         <Back {...{ region }} />
         <Front>
           <Panel {...{ cost, region, tasting_notes, title }} />
-          <Image>
-            <img src={`/assets/${image}`} alt="" />
-          </Image>
+          <Image {...{ image }} />
         </Front>
       </Wrapper>
     </Link>

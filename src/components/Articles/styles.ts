@@ -1,8 +1,19 @@
 import styled from 'styled-components'
 
-export const Back = styled.div`
+export const Back = styled.div<{ image: string }>`
   transition: transform 0.1s ease-in-out;
   filter: contrast(60%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  background-image: url(/assets/${p => p.image});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
 
   div {
     position: absolute;
@@ -26,14 +37,17 @@ export const Wrapper = styled.div`
   z-index: 0;
   position: relative;
   color: white;
-  height: 100%;
-  margin: 36px auto;
+  height: 500px;
+  margin: ${36 + 36 / 2}px;
+  @media ${p => p.theme.size.small} {
+    margin: ${12 + 12 / 2}px;
+  }
 
-  max-width: 1000px;
   border-radius: 5px;
 
   a {
     display: block;
+    text-decoration: none;
 
     &:hover ${Back} {
       transform: scale(1.03);
@@ -43,21 +57,26 @@ export const Wrapper = styled.div`
 
 export const Margin = styled.div`
   margin: 36px;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+
+  @media ${p => p.theme.size.small} {
+    margin: 12px;
+  }
 `
 
 export const Front = styled.div`
   border-radius: 5px;
   z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 
   display: flex;
   align-items: flex-end;
-  padding-left: 36px;
-  margin: 36px;
+
+  @media ${p => p.theme.size.small} {
+    padding: 0;
+    margin: 0;
+  }
 `
 
 export const Story = styled.div`
